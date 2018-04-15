@@ -1,0 +1,45 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DomestiCasa</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<!-- !Contenido de la pagina! -->
+
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="\home" class="w3-button">DomestiCasa</a>
+    <!-- Right-sided naclass="w3-bar-itemvbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="\servicios" class="w3-bar-item w3-button">Nuestros servicios</a>
+      <a href="{% url 'trabaja' %}" class="w3-bar-item w3-button">¿Buscas trabajo?</a>
+      <a href="{% url 'contacto' %}" class="w3-bar-item w3-button">Contacto</a>
+      <a href=" {% url 'login:login' %}"  class="w3-bar-item w3-button">Ingresar</a>
+      <a href="{% url 'usuario:registrar' %}" class="w3-bar-item w3-button">Registrase</a>
+    </div>
+  </div>
+</div>
+
+{% block nav %}
+
+{% endblock %}
+{% block content %}
+<h4>bloque de contenido </h4>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+</body>
+</html>

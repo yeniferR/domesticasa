@@ -1,0 +1,117 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="w3-container " style="margin-top: 70px">
+    <form method='POST' class=" post-form w3-container w3-card-4   w3-margin" action='' required>{% csrf_token %}
+
+	  <h2 class="w3-center w3-text-blue" >Registrate en DomestiCasa</h2>
+
+	 	<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="form-group">
+					
+					<input class="w3-input w3-animate-input"" type="number" placeholder="Cedula"  required name="telefono">
+				</div>
+			</div>
+		</div>
+	
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="form-group">
+					
+					<input class=" w3-input w3-animate-input" type="text" placeholder="Nombre"  required name="first_name">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="form-group">
+					
+					<input class="w3-input w3-animate-input"" type="text" placeholder="Apellidos"  required name="last_name">
+				</div>
+			</div>
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="form-group">
+					
+					<input class="w3-input w3-animate-input"" type="date" placeholder="Fecha de nacimiento"  required name="fecha de nacimiento">
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="form-group">
+					
+			      <select class="w3-select w3-animate-input" placeholder="Genero"  required name="Genero">
+      	            <option value=""disabled selected>Seleciona tu Genero</option>
+      	            <option value="1">Femenino</option>
+      	            <option value="2">Masculino</option>
+                  </select>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="form-group">
+					
+					<input class="w3-input w3-animate-input"" type="number" placeholder="Telefono"  required name="telefono">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="form-group">
+					
+					<input class="w3-input w3-animate-input"" type="carater" placeholder="Direccion"  required name="direccion">
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="form-group">
+					
+					<input class="w3-input w3-animate-input"" type="text" placeholder="Nombre de usuario"  required name="username">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="form-group">
+					
+					<input class="w3-input w3-animate-input"" type="text" placeholder="Correo"  required name="email">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="form-group">
+					
+					<input class="w3-input w3-animate-input"" type="password" placeholder="Contraseña"  required  name="password1">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="form-group">
+					
+					<input class="w3-input w3-animate-input"" type="password"  placeholder="Confirmar contraseña"  required name="password2">
+				</div>
+			</div>
+		</div>
+	
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="form-group">
+					<button type="submit" class="w3-btn w3-blue" >REGISTRARSE</button>
+				</div>
+			</div>
+		</div>
+	
+	</form>
+</div>
+{% endblock %}

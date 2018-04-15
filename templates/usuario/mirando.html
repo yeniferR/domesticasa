@@ -1,0 +1,64 @@
+{% extends 'base/base.html'%}
+
+
+{% block content%}
+
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="w3-container w3-half  " style="margin-top: 70px">
+	
+    <form method="post" class=" post-form w3-container w3-card-4   w3-margin">
+     {% csrf_token %}
+     
+      <h2 class="w3-center w3-text-blue">Registrate en DomestiCasa</h2>
+     
+      	<div class="col-md-8 col-md-offset-2">
+      	       <p>
+                 <input class="w3-input w3-animate-input " type="number" style="width:95%" placeholder="Cedula"  required name="Cedula"></p>
+                
+          	
+     	</div>
+     
+       	 <div class="col-md-8 col-md-offset-2">
+       	    <p><i class= "fa fa-user-o" style="font-size:25px"></i><input class="w3-input   " type="text" style="width:95%" placeholder="Nombre"  required name="Nombre"></p>
+       	</div>
+        
+
+     	<div class="col-md-8 col-md-offset-2">
+     		<p><input class="w3-input w3-animate-input " type="text" style="width:95%" placeholder="Apellido"  required name="Apellido"></p>	 
+      </div>
+      <div class="col-md-8 col-md-offset-2">
+           <p><select class="w3-select w3-animate-input"  style="width:95%" placeholder="Genero"  required name="Genero">
+      	   <option value=""disabled selected>Seleciona tu Genero</option>
+      	   <option value="1">Femenino</option>
+      	   <option value="2">Masculino</option>
+           </select></p>
+       </div>
+       <div class="col-md-8 col-md-offset-2">
+       	  <p><input class="w3-input w3-animate-input " type="number" style="width:95%" placeholder="Telefono" required name="Telefono"></p>
+
+        </div>
+      <div class="col-md-8 col-md-offset-2">
+      	 <p><input class="w3-input w3-animate-input " type="text" style="width:95%" placeholder="Email"  required name="Email"></p>
+      	
+        </div>
+      
+      <div class="col-md-8 col-md-offset-2">
+      		<p><input class="w3-input w3-animate-input  " type="password" style="width:95%" placeholder="contraseña" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required></p>
+        </div>
+
+      <div class="col-md-8 col-md-offset-2">
+      		<p><input class="w3-input w3-animate-input  " type="password" style="width:95%" placeholder="Repetir Contraseña" id="psw" name="psw-repeat" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required></p>
+        </div>
+      <div class="col-md-8 col-md-offset-2">
+           <p><button  type="submit" class="w3-btn w3-blue">REGISTRARSE</button></p>
+        </div>
+      <div class="col-md-8 col-md-offset-2">
+          <input class="w3-check" type="checkbox" checked="checked">Recordarme
+        </div>
+        
+    </form>
+
+</div>
+{% endblock%}

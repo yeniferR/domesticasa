@@ -1,0 +1,57 @@
+{% extends 'base/base.html'%}
+{% block content%}
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+body {font-family: "Open Sans"}
+</style>
+<body >
+    <div  class="carousel slide" data-ride="carousel" style="margin-top: 70px">
+
+        <div class="w3-row  w3-padding-39">
+        
+         <div class="row">
+            <div class="col-md-10 col-md-offset-5">
+         	     <p class="w3-center"  ><button class="w3-button  w3-padding-large w3-third  w3-margin-bottom w3-blue" onclick="myFunction('demo2')"><b>que es domesticasa  </b> </button></p>
+              <p class="w3-clear"></p>
+             </div>
+         </div>
+          
+          
+          <div class="w3-center" id="demo2" style="display:none">
+                <p class="w3-row  " >Love your blog page! Simply the best! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
+            </div>
+          
+        </div>
+     </div>
+    
+
+        
+
+   <script>
+     // Toggle between hiding and showing blog replies/comments
+     document.getElementById("myBtn").click();
+     function myFunction(id) {
+     var x = document.getElementById(id);
+     if (x.className.indexOf("w3-show") == -1) {
+         x.className += " w3-show";
+       } else { 
+        x.className = x.className.replace(" w3-show", "");
+         }
+       }
+
+    </script>
+</body>
+</html>
+
+{% endblock%}

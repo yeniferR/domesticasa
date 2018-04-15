@@ -1,0 +1,39 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+{% endblock %}
+{% block navbar%}
+{% endblock %}
+{% block content %}
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="w3-container w3-half  " style="margin-top: 120px">
+<form method="post">
+	{% csrf_token %}
+	   <div class="row">
+        <div class="col-md-8 col-md-offset-8">
+        		<label for="username">Nombre de usuario:</label>
+        	<p><input class="w3-input w3-border" type="text" placeholder="Nombre" requiered name="username">
+              </p>
+        </div>
+           </div>
+        <div class="row">
+        <div class="col-md-8 col-md-offset-8">
+        		<label for="username">Contraseña:</label>
+        		<p><input class="w3-input w3-border" type="password" placeholder="Contraseña" required name="password">
+                </p>
+       </div>
+           </div>
+    <div class="row">
+    	<div class="col-md-8 col-md-offset-8">
+    		<div class="form-group">
+                <a href="{% url 'password_reset' %}" >Olvidé mi contraseña</a>
+        		<input class="btn btn-primary" type="submit" value="Ingresar">
+    	   </div>
+        </div>
+    </div>
+</form>
+
+
+{% endblock %}

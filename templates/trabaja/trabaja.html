@@ -1,0 +1,79 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<!-- Contenido Contacto-->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="w3-container w3-card-center  " style="margin-top: 70px">
+  <h2 class="w3-center">{{ title }}</h2>
+  
+  <div class="form-group  ">
+    {% if confirm_message %}
+      <p> {{confirm_message}} </p>
+    {% endif %}
+
+    {% if form %}
+      <form method='POST' action='' required>{% csrf_token %}
+   <!-- {{ form.as_p }}-->
+
+  
+    <div class="row">
+      <div class="col-sm-8 col-md-offset-2">
+        <div class="form-group">
+          
+          <input class="w3-input w3-padding-16" type="text" placeholder="Nombre"  required name="nombre">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="form-group">
+          
+          <input class="w3-input w3-padding-16"" type="text" placeholder="Apellidos"  required name="apellido">
+        </div>
+      </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="form-group">
+          
+          <input class="w3-input w3-padding-16"" type="number" placeholder="Telefono"  required name="telefono">
+        </div>
+      </div>
+    </div>
+
+     <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="form-group">
+          
+          <input class="w3-input w3-padding-16" type="number" placeholder="Cedula"  required name="cedula">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="form-group">
+          
+          <input class="w3-input w3-padding-16"" type="text" placeholder="Email"  required name="email">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="form-group">
+          
+          <input class="w3-input w3-padding-16"" type="text" placeholder="ciudad"  required name="ciudad">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="form-group">
+          
+  </div>
+  <button class="w3-button 3-btn w3-blue w3-section" type="submit">¡Envia tus datos!</button>
+  </form>
+</div>
+{% endif %}
+<br>
+{%endblock%}

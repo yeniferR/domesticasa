@@ -1,0 +1,33 @@
+{% extends 'base/base22.html' %}
+{% block content %}
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="w3-container w3-card-center  " style="margin-top: 70px">
+<!-- Contenido Contacto-->
+<div class="container">
+  <h1>{{ title }}</h1>
+  <div class="form-group">
+    {% if confirm_message %}
+      <p> {{confirm_message}} </p>
+    {% endif %}
+
+    {% if form %}
+    <form method='POST' action='' required>{% csrf_token %}
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Nombre"  required name="nombre"></p>
+    
+      <p><input class="w3-input w3-padding-16"" type="nunber" placeholder="Telefono"  required name="telefono"></p>
+      
+      <p><input class="w3-input w3-padding-16"" type="caracter" placeholder="Direccion"  required name="Direccion"></p>
+      <p><input class="w3-input w3-padding-16"" type="text" placeholder="Ciudad"  required name="ciudad"></p>
+
+      <p><input class="w3-input w3-padding-16"" type="date" placeholder="Date"  required name="fecha"></p>
+    
+  </div>
+  <input type='submit' value='Enviar' class='btn btn-success' />
+  <a href="\cliente" ><p>volver Inicio</p>
+  </form>
+</div>
+{% endif %}
+<br>
+{%endblock%}

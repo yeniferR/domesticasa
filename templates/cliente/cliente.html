@@ -1,0 +1,123 @@
+{% extends 'base/base1.html' %}
+{% load staticfiles %}
+{% block content%}
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+</style>
+<body class="w3-light-grey ">
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-container"><br>
+         <h2>DomestiCasa</h2> <br>
+         <p><a href="\cliente" >Inicio</p>
+          <p><a href="\limpieza" >Contratar servicio</p>
+          <p></i>Promociones</p>
+          
+          <a href="{% url 'logout' %}" class="w3-bar-item w3-button w3-teal "></i>Salir</a><br>
+
+         
+          <br>
+        </div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+   <div class="w3-twothird">
+    <div class="w3-row-padding">
+     <div class="w3-container w3-card w3-white w3-margin-bottom">
+         <h2 class="w3-text-grey w3-padding-16 w3-center"></i>Bienvenido a Domesticasa</h2>
+          <div class="w3-container">
+          <div class="w3-third w3-container w3-margin-bottom">
+          <img src="{% static 'img/15.jpg' %}" alt="Norway" style="width:90%" class="w3-hover-opacity">
+          <div class="w3-container w3-white" style="width:90%">
+            <br>
+            <p><h3 class="w3-center">Ana</h3></p>
+         </div>
+         </div>
+         <div class="w3-third w3-container w3-margin-bottom">
+            <img src="{% static 'img/16.jpg' %}" alt="Norway" style="width:80%" class="w3-hover-opacity">
+            <div class="w3-container w3-white" style="width:90%">
+              <br>
+              <p><h3 class="w3-center">María</h3></p>
+             
+            </div>
+          </div>
+          <div class="w3-third w3-container w3-margin-bottom">
+            <img src="{% static 'img/17.jpg' %}" alt="Norway" style="width:30%" class="w3-hover-opacity">
+            <div class="w3-container w3-white" style="width:90%">
+              <br>
+              <p><h3 >Estefania</h3></p>
+              <br>
+             <p></p>
+            </div>
+          </div>
+          <div class="w3-third w3-container w3-margin-bottom">
+            <img src="{% static 'img/18.jpg' %}" alt="Norway" style="width:90%" class="w3-hover-opacity">
+            <div class="w3-container w3-white" style="width:90%">
+              <br>
+              <p><h3 class="w3-center">Diana</h3></p>
+             <p></p>
+            </div>
+          </div>
+          <div class="w3-third w3-container w3-margin-bottom">
+            <img src="{% static 'img/19.jpg' %}" alt="Norway" style="width:85%" class="w3-hover-opacity">
+            <div class="w3-container w3-white" style="width:90%">
+              <br>
+              <p><h3 class="w3-center">Camila</h3></p>
+             <p></p>
+            </div>
+          </div>
+          <div class="w3-third w3-container w3-margin-bottom">
+            <img src="{% static 'img/21.jpg' %}" alt="Norway" style="width:90%" class="w3-hover-opacity">
+            <div class="w3-container w3-white" style="width:50%">
+              <br>
+              <p><h3 class="w3-center">Esmeralda</h3></p>
+             
+            </div>
+          </div>
+
+
+
+
+
+        </div>
+      </div>
+       
+    </div>
+       
+        
+      
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+
+</div>
+</body>
+</html>
+{% endblock%}
